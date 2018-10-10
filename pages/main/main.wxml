@@ -1,0 +1,11 @@
+<view class='page_main'>
+   <view class='view_top'>
+     <image class="img_head" src='{{avatarUrlStr}}' mode='aspectFill'></image>
+     <button class="btn_position" bindtap='onLocationTap'>搜索位置查找附近的充电器</button>
+     <image class='img_menu' src='/imgs/ic_menu.png' mode='aspectFill'></image>
+   </view>
+
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location class="mapview"></map>
+
+
+</view>

@@ -1,0 +1,11 @@
+<!--pages/order/order.wxml-->
+<view class='page_order'>
+   <view wx:for="{{items}}" class='item_view'>
+     <view class='item_line'></view>
+     <view class='item_content'>
+     <image src='/imgs/ic_order.png' class='img_show'></image>
+     <text class='txt_order_time'>使用时长：{{item.time}}</text>
+        <text class='txt_order_price'>支付：{{item.price}}</text>
+     </view>
+   </view>
+</view>

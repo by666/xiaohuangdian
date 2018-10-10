@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+
+<image class="img_avatar" src="{{avatarUrlStr}}" mode='aspectFill'></image>
+<text class='txt_nickname'>{{nickNameStr}}</text>
+<text class="txt_title">小黄车测试</text>
+<text class='txt_content'>扫码结果:{{scanResultStr}}</text>
+
+<button 
+    wx:if="{{canIUse}}" 
+    open-type="getUserInfo" 
+    bindgetuserinfo="bindGetUserInfo"
+    type='primary'
+    class='btn_login'
+>授权登录</button>
+<view wx:else>请升级微信版本</view>
+
+<button
+    class = 'btn_getphone'
+    open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber"
+    type="primary">获取手机号</button> 
+
+<button class="btn_scan"  bindtap="onScanTap" type="primary">扫码充电</button>
+<button class="btn_orderlist"  bindtap="onOrderListTap" type="primary">订单列表</button>
+
+</view>

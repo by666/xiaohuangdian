@@ -1,0 +1,49 @@
+/**index.wxss**/
+.img_avatar{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 200rpx;
+}
+
+.txt_nickname{
+  margin-top: 20rpx;
+}
+
+.txt_title{
+  margin-top: 50rpx;
+  color: #ff00ff;
+}
+.txt_content{
+  margin: 30rpx;
+  color: #ff0000;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: -webkit-box;
+  line-height: 40rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  text-overflow:ellipsis;
+
+}
+
+.btn_login{
+  width: 300rpx;
+  margin-top: 50rpx;
+}
+
+.btn_getphone{
+  width: 300rpx;
+  margin-top: 30rpx;
+}
+
+.btn_scan{
+  width: 300rpx;
+  margin-top: 30rpx;
+}
+
+.btn_orderlist{
+   width: 300rpx;
+  margin-top: 30rpx;
+}
