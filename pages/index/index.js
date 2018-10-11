@@ -62,7 +62,7 @@ Page({
   //跳转到订单列表
   onOrderListTap:function(){
     wx.navigateTo({
-      url: '../order/order',
+      url: '../mine/order/order',
     })
   }
 })

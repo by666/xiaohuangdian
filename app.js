@@ -62,6 +62,6 @@ App({
     userInfo: null, 
     sysInfo: null,
     windowW: null,
-    windowH: null
+    windowH: null,
   }
 })

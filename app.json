@@ -3,7 +3,9 @@
     "pages/main/main",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/order/order"
+    "pages/mine/mine",
+    "pages/mine/order/order"
+        
   ],
   "window": {
     "backgroundTextStyle": "light",

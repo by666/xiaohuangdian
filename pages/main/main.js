@@ -55,22 +55,23 @@ Page({
    */
   onLoad: function () {
     var that = this;
-    // 查看是否授权
-    wx.getSetting({
-      success: function (res) {
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: function (res) {
-              //用户已经授权过
-              that.setData({
-                avatarUrlStr: res.userInfo.avatarUrl,
-                nickNameStr: res.userInfo.nickName
-              })
-            }
-          })
-        }
-      }
-    }),
+    // // 查看是否授权
+    // wx.getSetting({
+    //   success: function (res) {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       wx.getUserInfo({
+    //         success: function (res) {
+    //           app.globalData.nickName = res.userInfo.nickName;
+    //           app.globalData.avatarUrl = res.userInfo.avatarUrl;
+    //           //用户已经授权过
+    //           that.setData({
+    //             avatarUrlStr: res.userInfo.avatarUrl,
+    //             nickNameStr: res.userInfo.nickName
+    //           })
+    //         }
+    //       })
+    //   }
+    // }),
     wx.getLocation({
       type: 'gcj02', 
       success: function (res) {
@@ -83,7 +84,6 @@ Page({
       }
     })
   },
-
   controltap(e) {
     var cId = e.controlId;
     var that = this;
@@ -114,6 +114,18 @@ Page({
   },
 
   regionchange(e){
+
+  },
+
+  //点击头像
+  onHeadTap:function(){
+    wx.navigateTo({
+      url: '../mine/mine',
+    })
+  },
+
+  //点击菜单
+  onMenuTap:function(){
 
   },
 
