@@ -4,8 +4,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/mine",
-    "pages/mine/order/order"
-        
+    "pages/mine/order/order",
+    "pages/mine/help/help",
+    "pages/mine/help/helpdetail/helpdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

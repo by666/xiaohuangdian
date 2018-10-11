@@ -13,19 +13,19 @@ Page({
       },
       { "imageSrc": "/imgs/ic_menu_help.png",
         "titleStr": "帮助中心", 
-        "url": "../mine/order/order"  
+        "url": "../mine/help/help"  
       },
       { "imageSrc": "/imgs/ic_menu_join.png", 
         "titleStr": "我要加盟", 
-        "url": "../mine/order/order"  
+        "url": null  
       },
       { "imageSrc": "/imgs/ic_menu_about.png", 
         "titleStr": "关于我们", 
-        "url": "../mine/order/order" 
+        "url": "../mine/help/helpdetail/helpdetail?title=关于我们" 
       },
       { "imageSrc": "/imgs/ic_menu_contact.png", 
         "titleStr": "联系我们", 
-        "url": "../mine/order/order"
+        "url": "../mine/help/helpdetail/helpdetail?title=联系我们" 
       }]
   },
 
@@ -37,6 +37,12 @@ Page({
      that.setData({
        balanceStr: "0.00"
      })
+  },
+
+  onItemTap:function(){
+    wx.makePhoneCall({
+      phoneNumber: '18680686420',
+    })
   },
 
   /**

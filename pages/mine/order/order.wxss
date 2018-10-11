@@ -1,5 +1,5 @@
 .page_order{
-
+  width: 100%;
 }
 
 .item_view{

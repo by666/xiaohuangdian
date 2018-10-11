@@ -1,7 +1,9 @@
 <view class='page_main'>
 <view class='page_main_content'>
    <view class='view_top'>
-   <open-data type="userAvatarUrl" class="img_head" mode='aspectFill' bindtap='onHeadTap'></open-data>
+     <view class="img_head" bindtap='onHeadTap'>
+   <open-data type="userAvatarUrl"mode='aspectFill' ></open-data>
+   </view>
      <button class="btn_position" bindtap='onLocationTap'>搜索位置查找附近的充电器</button>
      <image class='img_menu' src='/imgs/ic_menu.png' mode='aspectFill' bindtap='onMenuTap'></image>
    </view>

@@ -1,0 +1,10 @@
+<!--pages/mine/help/help.wxml-->
+ <view wx:for="{{items}}" class='item_help' wx:for-index="idx">
+             <navigator url="../help/helpdetail/helpdetail?title=帮助中心">
+    <view class='help_item_view'>
+      <text class='help_item_title'>{{item.title}}</text>
+       <image src='/imgs/ic_right_arrow.png' class='help_item_arrow'></image>
+     </view>
+  <view wx:if="{{idx!=items.length-1}}" class="divLine"></view>
+  </navigator>
+ </view>
