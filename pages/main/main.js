@@ -99,10 +99,9 @@ Page({
     }else if(cId == 2){
       wx.scanCode({
         success: (res) => {
-          that.setData({
-            
+          wx.navigateTo({
+            url: '../charge/charge?code='+res.result
           })
-          console.log(res.result);
         }
       })
     }

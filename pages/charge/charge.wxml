@@ -1,0 +1,12 @@
+<!--pages/charge/charge.wxml-->
+<view class="page_charge">
+  <image class='charge_join_image' src="/imgs/ic_join.png" mode='aspectFill'></image>
+  <text class='charge_rule_title'>计费规则</text>
+  <radio-group class="radio-group" bindchange="onRadioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.title}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+<button class = "charge_psw_btn" type='primary' bindtap='onChargeTap'>开始充电</button>
+</view>
