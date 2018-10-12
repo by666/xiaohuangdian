@@ -8,7 +8,7 @@
      <image class='img_menu' src='/imgs/ic_menu.png' mode='aspectFill' bindtap='onMenuTap'></image>
    </view>
 
-<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location class="mapview">
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location class="mapview" style='height:{{actualHeight}}px'>
 </map>
 
 </view>

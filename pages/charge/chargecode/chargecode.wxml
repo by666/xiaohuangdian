@@ -1,0 +1,9 @@
+<view class='container'>
+    <image class='chargecode_join_image' src="/imgs/ic_banner.png" mode='aspectFill'></image>
+    <text class = "chargecode_psw_title">输入密码解锁充电器</text>
+    <scroll-view class="chargecode_scrollview" scroll-x="true">
+      <view wx:for="{{items}}" class='chargecode_items'>
+          <text class="chargecode_item_text">{{item.psw}}</text>
+      </view>
+    </scroll-view>
+</view>

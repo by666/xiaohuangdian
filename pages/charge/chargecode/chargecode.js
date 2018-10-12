@@ -1,15 +1,16 @@
-// pages/charge/charge.js
+// pages/charge/chargecode/chargecode.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     codeStr:"",
-     items: [
-       { title: '1', value: '使用1小时 ¥ 1.00' },
-       { title: '6', value: '使用6小时 ¥ 3.00' },
-       { title: '24', value: '使用24小时 ¥ 5.00', checked: 'true' }
+    items:[
+      { psw: 1 },
+      { psw: 1 },
+      { psw: 2 },
+      { psw: 3 },
+      { psw: 5 }
     ]
   },
 
@@ -17,18 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      var that = this;
-      that.setData({
-        codeStr : options.code
-      })
+
   },
 
-  onChargeTap:function(){
-    //处理支付
-    wx.navigateTo({
-      url: '../charge/chargecode/chargecode',
-    })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

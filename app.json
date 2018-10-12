@@ -7,8 +7,9 @@
     "pages/mine/order/order",
     "pages/mine/help/help",
     "pages/mine/help/helpdetail/helpdetail",
-    "pages/charge/charge"
-    ],
+    "pages/charge/charge",
+    "pages/charge/chargecode/chargecode"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

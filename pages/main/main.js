@@ -10,6 +10,7 @@ Page({
     avatarUrlStr: "",
     latitude:null,
     longitude:null,
+    actualHeight: app.globalData.windowH - 100 / 750 * app.globalData.windowW,
     //地图上的点
     markers: [{
       iconPath: "/imgs/ic_position.png",
@@ -45,6 +46,16 @@ Page({
           top: app.globalData.windowH - 200,
           width: 80,
           height: 80
+        },
+        clickable: true
+      }, {
+        id: 3,
+        iconPath: '/imgs/ic_my_location.png',
+        position: {
+          left: app.globalData.windowW / 2 - 15,
+          top: (app.globalData.windowH - 100 / 750 * app.globalData.windowW)/2 - 30 ,
+          width: 30,
+          height: 30
         },
         clickable: true
       }]

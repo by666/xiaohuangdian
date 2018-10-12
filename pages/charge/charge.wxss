@@ -1,11 +1,3 @@
-.page_charge{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 .charge_join_image{
   width: 100%;
