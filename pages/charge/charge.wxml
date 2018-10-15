@@ -1,12 +1,31 @@
 <!--pages/charge/charge.wxml-->
 <view class="container">
-  <image class='charge_join_image' src="/imgs/ic_banner.png" mode='aspectFill'></image>
-  <text class='charge_rule_title'>计费规则</text>
-  <radio-group class="radio-group" bindchange="onRadioChange">
-  <label class="radio" wx:for="{{items}}">
-    <radio value="{{item.title}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</radio-group>
+      <image class='charge_join_image' src="/imgs/ic_banner.png" mode='aspectFill'></image>
 
-<button class = "charge_psw_btn" type='primary' bindtap='onChargeTap'>开始充电</button>
+        <view class = "charge_content_view">
+          <view class='charge_title_view'>
+            <text class='charge_rule_title'>计费规则</text>
+            <text class='charge_rule_help_btn' bindtap='onHelpTap'>使用帮助 ></text>
+          </view>
+           <view class='charge_rule_line'></view>
+                   <scroll-view class="charge_scrollview" scroll-y="true">
+
+           <view class='charge_rule_tips'>* 押金5元</view>
+           <view class='charge_rule_tips'>* 选择计费模式</view>
+           <view class = "charge_list">
+           <block wx:for = "{{items}}" wx:key="index"  wo:for-item='item' class='charge_list'>
+                  <button class="charge_list_item" type="{{item.checked ? 'primary' : 'default'}}" bindtap='onItemTap' data-name='{{item.id}}'>{{item.value}}</button>
+           </block>
+           </view>
+    </scroll-view>
+
+        </view>
+        <!-- 
+        <radio-group class="radio-group" bindchange="onRadioChange">
+        <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.title}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+      </radio-group> -->
+
+    <button class = "charge_psw_btn" type='primary' bindtap='onChargeTap'>开始充电</button>
 </view>

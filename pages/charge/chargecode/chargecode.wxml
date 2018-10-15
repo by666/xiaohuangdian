@@ -1,9 +1,26 @@
 <view class='container'>
     <image class='chargecode_join_image' src="/imgs/ic_banner.png" mode='aspectFill'></image>
+    <view class='chargecode_body_view'>
     <text class = "chargecode_psw_title">输入密码解锁充电器</text>
     <scroll-view class="chargecode_scrollview" scroll-x="true">
-      <view wx:for="{{items}}" class='chargecode_items'>
+      <view wx:for="{{items}}" class='chargecode_items' wx:key="index">
           <text class="chargecode_item_text">{{item.psw}}</text>
       </view>
     </scroll-view>
+    <view class= "chargecode_time_txt">剩余充电时间</view>
+    <view class= "chargecode_time_txt2">{{timeStr}}</view>
+    <view class= "chargecode_time_txt">充电时间截止，系统将自动退押金</view>
+
+<view class="charge_code_btnview">
+  <button class='chargecode_btn' type='primary'>续费</button>
+  <button class='chargecode_btn' type='default'>结束充电</button>
+</view>
+
+</view>
+
+<view class='chargecode_tips_view'>
+<view class = "chargecode_tips_txt">1.续费后可延长充电时间</view>
+<view class = "chargecode_tips_txt">2.提前结束充电，系统会当即退押金</view>
+</view>
+
 </view>

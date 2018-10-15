@@ -10,7 +10,12 @@ App({
         that.globalData.sysInfo = res;
         that.globalData.windowW = res.windowWidth;
         that.globalData.windowH = res.windowHeight;
-        console.log(res.windowHeight);
+        console.log("width = " + res.windowWidth);
+        console.log("window height = " + res.windowHeight);
+        console.log("statubar height = " + res.statusBarHeight);
+        console.log("screen height = " + res.screenHeight);
+        console.log("pixradio = " + res.pixelRatio);
+
       }
     })
     // 展示本地存储能力

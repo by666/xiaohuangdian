@@ -5,11 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-     codeStr:"",
+     selecttime:0,
      items: [
-       { title: '1', value: '使用1小时 ¥ 1.00' },
-       { title: '6', value: '使用6小时 ¥ 3.00' },
-       { title: '24', value: '使用24小时 ¥ 5.00', checked: 'true' }
+       {  id:0 , value: '1元1小时', time:1,checked: 'true'},
+       { id: 1, value: '3元4小时',time:4 },
+       { id: 2, value: '6元12小时',time:12 }
     ]
   },
 
@@ -17,16 +17,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      var that = this;
-      that.setData({
-        codeStr : options.code
-      })
+    for (var index in this.data.items) {
+      if (this.data.items[index].checked){
+         this.setData({
+            selecttime: this.data.items[index].time
+         })
+      }
+    }
+
+     
+  },
+
+  onHelpTap:function(){
+    wx.navigateTo({
+      url: '../mine/help/help',
+    })
+  },
+
+  onItemTap:function(e){
+    var id = e.currentTarget.dataset.name;
+    for(var index in this.data.items){
+      this.data.items[index].checked = false;
+    }
+    this.data.items[id].checked = true;
+
+    this.setData({
+      items: this.data.items,
+      selecttime: this.data.items[id].time
+    });
+
   },
 
   onChargeTap:function(){
     //处理支付
     wx.navigateTo({
-      url: '../charge/chargecode/chargecode',
+      url: '../charge/chargecode/chargecode?time='+this.data.selecttime,
     })
   },
   /**

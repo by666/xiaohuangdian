@@ -9,20 +9,14 @@
 
     <view class="weui-grids">
         <view class="weui-grid" wx:for="{{items}}" wx:key="name" >
-            <navigator url="{{item.url}}" wx:if="{{item.url == null ? false : true}}">
-                <view class='weui-grid__bg'>
+            <navigator url="{{item.url}}">
+                <view class='weui-grid__bg' bindtap="{{item.url == null ? 'onItemTap' : ''}}">
                     <view class="weui-grid__icon">
                         <image src=" {{item.imageSrc}}" mode="scaleToFill" />
                     </view>
                     <text class="weui-grid__label">{{item.titleStr}}</text>
                 </view>
             </navigator>
-              <view class='weui-grid__bg' bindtap='onItemTap' wx:else>
-                    <view class="weui-grid__icon">
-                        <image src=" {{item.imageSrc}}" mode="scaleToFill" />
-                    </view>
-                    <text class="weui-grid__label">{{item.titleStr}}</text>
-                </view>
         </view>
     </view>
 

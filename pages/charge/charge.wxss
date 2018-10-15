@@ -1,29 +1,89 @@
-
 .charge_join_image{
   width: 100%;
+  height: 400rpx;
 }
 
-.charge_rule_title{
-  margin: 30rpx;
-  font-size: 40rpx;
-  color: #FF7F50;
+
+.charge_content_view{
+  height: 500rpx;
+  width: 90%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 8px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 53rpx;
 }
 
-.radio-group{
-  margin-top: 20rpx;
+.charge_title_view{
+  height: 100rpx;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.charge_rule_title{
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  color: black;
 }
 
-.radio{
-  margin-bottom: 30rpx;
+.charge_rule_help_btn{
+  margin-right: 0rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  color: blue;
+}
+
+.charge_rule_line{
+  background-color: grey;
+  height: 1px;
+}
+
+.charge_scrollview{
+   width: 100%;
+   height: 400rpx;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.charge_rule_tips{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+
+}
+
+.charge_list{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.charge_list_item{
+  box-sizing: border-box;
+  flex: 0 0 44%;
+  height: 100rpx;
+  margin-top: 4%;
+  margin-left: 2%;
+  margin-right: 2%;
+  line-height: 100rpx;
 }
 
 .charge_psw_btn{
-  margin-top: 50rpx;
-  width: 200rpx;
-  height: 200rpx;
-  border-radius: 50%;
+  width: 400rpx;
+  height: 100rpx;
   font-size: 30rpx;
-  line-height: 200rpx;
+  margin-top: 50rpx;
+  line-height: 100rpx;
 }
+
