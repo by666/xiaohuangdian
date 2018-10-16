@@ -1,19 +1,20 @@
 {
-  "pages": [  
-    "pages/mine/order/order",
+  "pages": [
     "pages/main/main",
+    "pages/mine/order/order",
     "pages/charge/charge",
     "pages/mine/mine",
     "pages/charge/chargecode/chargecode",
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/help/help",
-    "pages/mine/help/helpdetail/helpdetail"
-      ],
+    "pages/mine/help/helpdetail/helpdetail",
+    "pages/mine/orderdetail/orderdetail"
+  ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FF7F50",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

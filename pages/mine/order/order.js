@@ -54,6 +54,31 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
+  },
+
+  //点击待支付item
+  onAlreadyItemClick:function(e){
+     wx.navigateTo({
+       url: '../orderdetail/orderdetail',
+     })
+  },
+  //点击充电中item
+  onUseItemClick:function(e){
+    wx.navigateTo({
+      url: '../orderdetail/orderdetail',
+    })
+  },
+  //点击已完成item
+  onCompeleteItemClick:function(e){
+    wx.navigateTo({
+      url: '../orderdetail/orderdetail',
+    })
+  },
+  //点击已取消item
+  onCancelItemClick:function(e){
+    wx.navigateTo({
+      url: '../orderdetail/orderdetail',
+    })
   }
 
 })
