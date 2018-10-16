@@ -1,13 +1,12 @@
 {
-  "pages": [
-        "pages/mine/mine",
-      
-    "pages/charge/charge",
+  "pages": [  
+    "pages/mine/order/order",
     "pages/main/main",
+    "pages/charge/charge",
+    "pages/mine/mine",
     "pages/charge/chargecode/chargecode",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/mine/order/order",
     "pages/mine/help/help",
     "pages/mine/help/helpdetail/helpdetail"
       ],

@@ -1,44 +1,104 @@
-.page_order{
+/**tabbar**/
+Page {
   width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+  overflow-y: hidden;
+  font-size: 30rpx;
 }
 
-.item_view{
-  width: 100%;
-  height: 200rpx;
-  background-color: white;
-  display: flex;
-  flex-direction:column; 
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 30%; 
+    color:#434343;
+}
+.active{
+    color:#F65959;
+    border-bottom: 4rpx solid #F65959;
 }
 
-.item_line{
-  width: 100%;
-  height: 10rpx;
-  background: #FFFFE0;
+
+/**item**/
+.order_item{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.item_content{
-   width: 100%;
-  height: 200rpx;
-  background-color: white;
-  display: flex;
-  flex-direction:row; 
-  align-items: center;
-  justify-content: space-between;
-
+.order_view{
+   width: 90%;
+   height: 500rpx;
+   border-style: solid;
+   border-width: 1px;
+   border-radius: 8px;
+   border-color: gainsboro;
+   margin-top: 20rpx;
+   margin-bottom: 20rpx;
 }
-.img_show{
-  width: 100rpx;
+
+.order_view .top{
   height: 100rpx;
-  margin-left: 20rpx;
+  border-bottom: solid 1rpx gainsboro;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
 }
 
-.txt_order_time{
-  color: #ff00ff;
-  size: 36rpx;
+.order_view .top .statu_txt{
+  color: #F65959;
 }
 
-.txt_order_price{
-  color:black;
-  size: 60rpx;
-  margin-right: 30rpx;
+.order_view .center{
+  height: 160rpx;
+  border-bottom: solid 1rpx gainsboro;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:20rpx;
+}
+
+.order_view .bottom{
+    height: 200rpx;
+   padding: 20rpx;
+}
+
+.order_view .bottom .row1{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+
+
+}
+
+.order_view .bottom .row2{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-top: 30rpx;
+
+}
+
+.order_view .bottom .row2 .pay_btn{
+   font-size: 30rpx;
+   margin-left: 0;
+   
+}
+
+.order_view .bottom .row2 .pay_txt{
+  font-size: 50rpx;
+  color: red;
 }

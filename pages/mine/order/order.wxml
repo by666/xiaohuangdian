@@ -1,11 +1,122 @@
-<!--pages/order/order.wxml-->
-<view class='page_order'>
-   <view wx:for="{{items}}" class='item_view'>
-     <view class='item_line'></view>
-     <view class='item_content'>
-     <image src='/imgs/ic_order.png' class='img_show'></image>
-     <text class='txt_order_time'>使用时长：{{item.time}}</text>
-        <text class='txt_order_price'>支付：{{item.price}}</text>
-     </view>
-   </view>
+<view>
+    <view class="swiper-tab">
+        <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">待支付</view>
+        <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">充电中</view>
+        <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">已完成</view>
+        <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">已取消</view>
+    </view>
+
+    <swiper style="height:{{contentHeight}}px" current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+        <swiper-item>
+            <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
+              <view wx:for="{{alreadyDatas}}" class='order_item' wx:key="index">
+                  <view class='order_view'>
+                     <view class='top'>
+                        <view >{{item.date}}</view>
+                        <view class='statu_txt'>{{item.statu}}</view>
+                     </view>
+                     <view class='center'>
+                        <view >订单编号：{{item.order}}</view>
+                         <view >商户名称：{{item.name}}</view>
+                         <view >充电时长：{{item.chargetime}}</view>
+                     </view>
+                     <view class='bottom'>
+                         <view class="row1">
+                           <view >押金：{{item.deposit}}元（未支付）</view>
+                           <view >充电金额：{{item.chargepay}}元</view>
+                         </view>
+                         <view class="row2">
+                           <button class ="pay_btn" type='primary'>立即支付</button>
+                           <view class="pay_txt">实付金额：{{item.totalpay}}元</view>
+                         </view>
+                     </view>
+
+                  </view>
+              </view>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+             <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
+              <view wx:for="{{useDatas}}" class='order_item' wx:key="index">
+                  <view class='order_view'>
+                     <view class='top'>
+                        <view >{{item.date}}</view>
+                        <view class='statu_txt'>{{item.statu}}</view>
+                     </view>
+                     <view class='center'>
+                        <view >订单编号：{{item.order}}</view>
+                         <view >商户名称：{{item.name}}</view>
+                         <view >充电时长：{{item.chargetime}}</view>
+                     </view>
+                     <view class='bottom'>
+                         <view class="row1">
+                           <view >押金：{{item.deposit}}元（待返还）</view>
+                           <view >充电金额：{{item.chargepay}}元</view>
+                         </view>
+                         <view class="row2">
+                           <button class ="pay_btn" type='primary'>退押金</button>
+                           <view class="pay_txt">实付金额：{{item.totalpay}}元</view>
+                         </view>
+                     </view>
+
+                  </view>
+              </view>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>  
+           <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
+              <view wx:for="{{compeleteDatas}}" class='order_item' wx:key="index">
+                  <view class='order_view'>
+                     <view class='top'>
+                        <view >{{item.date}}</view>
+                        <view class='statu_txt'>{{item.statu}}</view>
+                     </view>
+                     <view class='center'>
+                        <view >订单编号：{{item.order}}</view>
+                         <view >商户名称：{{item.name}}</view>
+                         <view >充电时长：{{item.chargetime}}</view>
+                     </view>
+                     <view class='bottom'>
+                         <view class="row1">
+                           <view >押金：{{item.deposit}}元（已返还）</view>
+                           <view >充电金额：{{item.chargepay}}元</view>
+                         </view>
+                         <view class="row2">
+                           <view class="pay_txt">实付金额：{{item.totalpay}}元</view>
+                         </view>
+                     </view>
+
+                  </view>
+              </view>
+            </scroll-view>
+            </swiper-item>
+          <swiper-item>
+               <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
+              <view wx:for="{{cancelDatas}}" class='order_item' wx:key="index">
+                  <view class='order_view'>
+                     <view class='top'>
+                        <view >{{item.date}}</view>
+                        <view class='statu_txt'>{{item.statu}}</view>
+                     </view>
+                     <view class='center'>
+                        <view >订单编号：{{item.order}}</view>
+                         <view >商户名称：{{item.name}}</view>
+                         <view >充电时长：{{item.chargetime}}</view>
+                     </view>
+                     <view class='bottom'>
+                         <view class="row1">
+                           <view >押金：{{item.deposit}}元（未支付）</view>
+                           <view >充电金额：{{item.chargepay}}元</view>
+                         </view>
+                         <view class="row2">
+                           <view class="pay_txt">实付金额：{{item.totalpay}}元</view>
+                         </view>
+                     </view>
+
+                  </view>
+              </view>
+            </scroll-view>
+          </swiper-item>
+    </swiper>
+
 </view>

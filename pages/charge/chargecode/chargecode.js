@@ -12,7 +12,7 @@ Page({
       { psw: 2 },
       { psw: 3 }
     ],
-    timeStr:"",
+    timeStr:"0小时0分0秒",
     hour:0 
   },
 
