@@ -9,7 +9,7 @@
     <swiper style="height:{{contentHeight}}px" current="{{currentTab}}" duration="300"  bindchange="swiperTab">
         <swiper-item>
             <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
-              <view wx:for="{{alreadyDatas}}" class='order_item' wx:key="index" bindtap='onAlreadyItemClick'>
+              <view wx:for="{{alreadyDatas}}" class='order_item' wx:key="key" data-index="{{index}}" bindtap='onAlreadyItemClick'>
                   <view class='order_view'>
                      <view class='top'>
                         <view >{{item.date}}</view>
@@ -37,7 +37,7 @@
           </swiper-item>
           <swiper-item>
              <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
-              <view wx:for="{{useDatas}}" class='order_item' wx:key="index" bindtap='onUseItemClick'>
+              <view wx:for="{{useDatas}}" class='order_item' wx:key="key" data-index="{{index}}"  bindtap='onUseItemClick'>
                   <view class='order_view'>
                      <view class='top'>
                         <view >{{item.date}}</view>
@@ -65,7 +65,7 @@
           </swiper-item>
           <swiper-item>  
            <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
-              <view wx:for="{{compeleteDatas}}" class='order_item' wx:key="index" bindtap='onCompeleteItemClick'>
+              <view wx:for="{{compeleteDatas}}" class='order_item' wx:key="key" data-index="{{index}}"  bindtap='onCompeleteItemClick'>
                   <view class='order_view'>
                      <view class='top'>
                         <view >{{item.date}}</view>
@@ -92,7 +92,7 @@
             </swiper-item>
           <swiper-item>
                <scroll-view scroll-y="true" style="height:{{contentHeight}}px" >  
-              <view wx:for="{{cancelDatas}}" class='order_item' wx:key="index" bindtap='onCancelItemClick'>
+              <view wx:for="{{cancelDatas}}" class='order_item' wx:key="key" data-index="{{index}}"  bindtap='onCancelItemClick'>
                   <view class='order_view'>
                      <view class='top'>
                         <view >{{item.date}}</view>

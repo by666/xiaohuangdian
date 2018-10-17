@@ -1,0 +1,60 @@
+<view class='container'>
+  <view class='carditem'>
+    <view class='cardview'>
+       <view class="top">
+         <view>订单编号：{{item.order}}</view>
+       </view>
+        <view class="center">
+         <view>订单状态：{{item.statu}}</view>
+         <view>下单时间：{{item.date}}</view>
+       </view>
+    </view>
+  </view>
+
+   <view class='carditem'>
+    <view class='cardview'>
+       <view class="top">
+         <view>充电线信息</view>
+       </view>
+        <view class="center">
+         <view>设备编号：SN2034824390832940</view>
+       </view>
+    </view>
+  </view>
+
+ <view class='carditem'>
+    <view class='cardview'>
+       <view class="top">
+         <view>商户信息</view>
+       </view>
+        <view class="center">
+         <view>商户名称：{{item.name}}</view>
+         <view>商户地址：广东省深圳市南山区高新南九道45号</view>
+       </view>
+    </view>
+  </view>
+
+
+  <view class='carditem'>
+    <view class='cardview'>
+       <view class="top">
+         <view>交易信息</view>
+       </view>
+        <view class="center">
+         <view>押金：{{item.deposit}}元</view>
+         <view>押金状态：未支付</view>
+         <view>计费模式：1元1小时</view>
+         <view>充电时长：{{item.chargetime}}</view>
+         <view>充电金额：{{item.chargepay}}元</view>
+         <view>实付金额：{{item.totalpay}}元</view>
+       </view>
+    </view>
+  </view>
+
+
+<button type='primary' class='orderdetail_confirm_btn' bindtap='onConfirmTap'
+ hidden='{{(item.statu == "待支付" || item.statu == "充电中" ? false : true)}}'>{{confirmStr}}</button>
+<view class='orderdetail_cancel_btn'  bindtap='onCancelTap' hidden='{{(item.statu == "待支付" || item.statu == "充电中" ? false : true)}}'>取消订单 ></view>
+
+
+</view>

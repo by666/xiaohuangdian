@@ -1,1 +1,12 @@
-/* pages/mine/orderdetail/orderdetail.wxss */
+.orderdetail_confirm_btn{
+   width:400rpx;
+   height: 100rpx;
+   line-height: 100rpx;
+   margin:30rpx;
+}
+
+.orderdetail_cancel_btn{
+
+   margin-bottom: 30rpx;
+   color: grey;
+}

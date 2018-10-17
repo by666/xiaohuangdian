@@ -21,11 +21,11 @@ Page({
       },
       { "imageSrc": "/imgs/ic_menu_about.png", 
         "titleStr": "关于我们", 
-        "url": "../mine/help/helpdetail/helpdetail?title=关于我们" 
+        "url": "../mine/helpdetail/helpdetail?title=关于我们" 
       },
       { "imageSrc": "/imgs/ic_menu_contact.png", 
         "titleStr": "联系我们", 
-        "url": "../mine/help/helpdetail/helpdetail?title=联系我们" 
+        "url": "../mine/helpdetail/helpdetail?title=联系我们" 
       }]
   },
 

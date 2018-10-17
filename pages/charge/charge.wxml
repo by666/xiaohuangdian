@@ -1,5 +1,5 @@
 <!--pages/charge/charge.wxml-->
-<view class="container">
+<view class="charge_page">
       <image class='charge_join_image' src="/imgs/ic_banner.png" mode='aspectFill'></image>
 
         <view class = "charge_content_view">
@@ -20,12 +20,6 @@
     </scroll-view>
 
         </view>
-        <!-- 
-        <radio-group class="radio-group" bindchange="onRadioChange">
-        <label class="radio" wx:for="{{items}}">
-        <radio value="{{item.title}}" checked="{{item.checked}}"/>{{item.value}}
-      </label>
-      </radio-group> -->
 
-    <button class = "charge_psw_btn" type='primary' bindtap='onChargeTap'>开始充电</button>
+    <button class = "charge_psw_btn" type='primary' bindtap='onChargeTap'>选择套餐开始充电</button>
 </view>

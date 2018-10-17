@@ -1,15 +1,15 @@
 {
   "pages": [
+    "pages/charge/charge",
     "pages/main/main",
     "pages/mine/order/order",
-    "pages/charge/charge",
+    "pages/mine/orderdetail/orderdetail",
     "pages/mine/mine",
     "pages/charge/chargecode/chargecode",
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/help/help",
-    "pages/mine/help/helpdetail/helpdetail",
-    "pages/mine/orderdetail/orderdetail"
+    "pages/mine/helpdetail/helpdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -58,26 +58,34 @@ Page({
 
   //点击待支付item
   onAlreadyItemClick:function(e){
+    var index =parseInt(e.currentTarget.dataset.index);
+    var selectData = this.data.alreadyDatas[index];
      wx.navigateTo({
-       url: '../orderdetail/orderdetail',
+       url: '../orderdetail/orderdetail?data=' + JSON.stringify(selectData),
      })
   },
   //点击充电中item
   onUseItemClick:function(e){
+    var index = parseInt(e.currentTarget.dataset.index);
+    var selectData = this.data.useDatas[index];
     wx.navigateTo({
-      url: '../orderdetail/orderdetail',
+      url: '../orderdetail/orderdetail?data=' + JSON.stringify(selectData),
     })
   },
   //点击已完成item
   onCompeleteItemClick:function(e){
+    var index = parseInt(e.currentTarget.dataset.index);
+    var selectData = this.data.compeleteDatas[index];
     wx.navigateTo({
-      url: '../orderdetail/orderdetail',
+      url: '../orderdetail/orderdetail?data=' + JSON.stringify(selectData),
     })
   },
   //点击已取消item
   onCancelItemClick:function(e){
+    var index = parseInt(e.currentTarget.dataset.index);
+    var selectData = this.data.cancelDatas[index];
     wx.navigateTo({
-      url: '../orderdetail/orderdetail',
+      url: '../orderdetail/orderdetail?data=' + JSON.stringify(selectData),
     })
   }
 

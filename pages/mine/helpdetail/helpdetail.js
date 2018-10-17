@@ -1,4 +1,4 @@
-// pages/mine/help/helpdetail/helpdetail.js
+// pages/mine/helpdetail/helpdetail.js
 Page({
 
   /**
